@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #6495ED;
+        }
+        div{
+            text-align: center;
+        }
+        p{
+          font: Arial;  
+        }
+        th{
+            text-align: center;
+            font-weight: 100;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    @Model TrabalhoRomualdo.Models.Usuario   
+    <div>
+        <h1>Obrigado por preencher o formulário @Model.Name</h1>
+        <p>
+            Então você nasceu em @Model.BirthDate, @Model.BirthDay <br/>           
+        </p>
+    </div>
+    <div>
+      <p>Seu IMC é de: <strong>@Model.IMC </strong><br/>
+        analise seu Indice de Massa Corporal na tabela abaixo
+      </p>
+    </div>
+    <table border="3">
+        <tr>
+            <th>IMC</th>
+            <th>Resultado</th>
+        </tr>
+        <tr>
+            <td width="65%">Menos do que 18,5</td>
+            <td width="57%">Abaixo do peso</td>
+        </tr>
+        <tr>
+            <td>Entre 18,5 e 24,9</td>
+            <td>Peso normal</td>
+        </tr>
+        <tr>
+            <td>Entre 25 e 29,9</td>
+            <td>Sobrepeso</td>
+        </tr>
+        <tr>
+            <td>Entre 30 e 34,9</td>
+            <td>Obesidade grau 1</td>
+        </tr>
+    </table>   
+</body>
+</html>
+
+
+
+

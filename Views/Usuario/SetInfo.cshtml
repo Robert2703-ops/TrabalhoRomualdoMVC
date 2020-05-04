@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #6495ED;
+        }
+        #Form{
+            text-align:center;
+            border: 10px;
+            border-color: white;
+        }
+        input[type="text"], [type="date"]{
+            border-color: white;
+            border-width: 2px;
+            background-color: #6495ED;           
+        }
+        input[type="submit"]{
+            background-color: #4682B4;
+            border-color: #4682B4;
+            border-radius: 7px;
+            border-width: 1px;
+        }
+        label{
+            font: medium Arial;          
+        }
+    </style>
+
+</head>
+<body>
+    <div id="Form">
+      <h1>Preencha o formulário, por favor</h1>
+        <form method="POST" asp-controller="Usuario" asp-action="ShowInfo" >
+          <label>Informe o seu nome:</label>
+              <input type="text" name="UserName" required/>
+        <br/>
+          <label>Informe a sua data de nascimento:</label>
+              <input type="date" name="BirthDate" required/> 
+        <br/>
+          <label>Informe sua altura:</label>
+              <input type="text" step=".01" name="UserHeight" maxlength = "8" required>
+        <br/>
+          <label>Informe o seu peso:</label>
+              <input type="text"  step=".01" name="UserWeight" maxlength = "10" required>
+        <br/>
+            <input type="submit" value="Enviar"/>         
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
